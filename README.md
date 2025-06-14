@@ -1,6 +1,6 @@
-# Python Training Documentation
+# Python Mastery Documentation
 
-A comprehensive Python training course built with VitePress, covering everything from basic programming concepts to advanced Excel automation.
+A comprehensive Python Mastery course built with VitePress, covering everything from basic programming concepts to advanced Excel automation.
 
 ## 🚀 Quick Start
 

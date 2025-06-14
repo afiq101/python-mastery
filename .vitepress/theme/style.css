@@ -1,0 +1,667 @@
+/**
+ * Elegant White & Soft Purple Theme for Ana's Python Training
+ * A clean, professional theme with soft purple accents
+ */
+
+:root {
+  /* Typography */
+  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --vp-font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  
+  /* Primary Purple Palette */
+  --vp-c-brand-1: #8b5fbf;
+  --vp-c-brand-2: #9d73d1;
+  --vp-c-brand-3: #b08ae6;
+  --vp-c-brand-soft: #e8d5f2;
+  
+  /* Purple Accent Colors */
+  --vp-c-purple-1: #8b5fbf;
+  --vp-c-purple-2: #a374d4;
+  --vp-c-purple-3: #b08ae6;
+  --vp-c-purple-soft: #f3ebff;
+  --vp-c-purple-mute: #f8f4ff;
+  
+  /* Background Colors */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #fafafa;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f8f4ff;
+  
+  /* Text Colors */
+  --vp-c-text-1: #2c3e50;
+  --vp-c-text-2: #476582;
+  --vp-c-text-3: #90a4b7;
+  
+  /* Border Colors */
+  --vp-c-border: #e8d5f2;
+  --vp-c-divider: #f0e6ff;
+  --vp-c-gutter: #f8f4ff;
+  
+  /* Code Block Colors */
+  --vp-code-bg: #f8f4ff;
+  --vp-code-block-bg: #fafafa;
+  
+  /* Custom Variables */
+  --ana-purple-light: #f8f4ff;
+  --ana-purple-medium: #e8d5f2;
+  --ana-purple-accent: #8b5fbf;
+  --ana-white: #ffffff;
+  --ana-gray-light: #f9f9f9;
+}
+
+/* Global Styling */
+body {
+  font-family: var(--vp-font-family-base);
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode adjustments */
+.dark {
+  /* Dark Purple Backgrounds */
+  --vp-c-bg: #1a0d2e;
+  --vp-c-bg-alt: #241240;
+  --vp-c-bg-elv: #2d1b4e;
+  --vp-c-bg-soft: #241240;
+  
+  /* Enhanced Purple Palette for Dark Mode */
+  --vp-c-brand-1: #c9a9dd;
+  --vp-c-brand-2: #b08ae6;
+  --vp-c-brand-3: #9d73d1;
+  --vp-c-brand-soft: #4a2c5a;
+  
+  /* Dark Mode Text Colors */
+  --vp-c-text-1: #f8f4ff;
+  --vp-c-text-2: #e8d5f2;
+  --vp-c-text-3: #c9a9dd;
+  
+  /* Dark Mode Borders */
+  --vp-c-border: #4a2c5a;
+  --vp-c-divider: #3d2447;
+  --vp-c-gutter: #2d1b4e;
+  
+  /* Dark Mode Code Colors */
+  --vp-code-bg: #2d1b4e;
+  --vp-code-block-bg: #241240;
+  
+  /* Dark Mode Custom Variables */
+  --ana-purple-light: #2d1b4e;
+  --ana-purple-medium: #4a2c5a;
+  --ana-purple-accent: #c9a9dd;
+  --ana-white: #1a0d2e;
+  --ana-gray-light: #241240;
+}
+
+/* Header Styling */
+.VPNav {
+  background: linear-gradient(135deg, var(--ana-white) 0%, var(--ana-purple-light) 100%);
+  border-bottom: 2px solid var(--ana-purple-medium);
+  backdrop-filter: blur(10px);
+}
+
+.VPNavBar .title {
+  color: var(--ana-purple-accent);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Sidebar Styling */
+.VPSidebar {
+  background: linear-gradient(180deg, var(--ana-white) 0%, var(--ana-purple-light) 100%);
+  border-right: 1px solid var(--ana-purple-medium);
+}
+
+.VPSidebarItem.level-0 .text {
+  color: var(--ana-purple-accent);
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--ana-purple-accent);
+  background: var(--ana-purple-light);
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+/* Content Area */
+.VPContent {
+  background: var(--ana-white);
+}
+
+.vp-doc {
+  background: var(--ana-white);
+}
+
+/* Hero Section */
+.VPHero {
+  background: linear-gradient(135deg, var(--ana-white) 0%, var(--ana-purple-light) 50%, var(--ana-purple-medium) 100%);
+  border-radius: 16px;
+  margin: 2rem 0;
+  padding: 3rem 2rem;
+}
+
+.VPHero .name {
+  background: linear-gradient(135deg, var(--ana-purple-accent) 0%, #9d73d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.VPButton.brand {
+  background: linear-gradient(135deg, var(--ana-purple-accent) 0%, #9d73d1 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 95, 191, 0.3);
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 95, 191, 0.4);
+}
+
+.VPButton.alt {
+  background: var(--ana-white);
+  border: 2px solid var(--ana-purple-accent);
+  color: var(--ana-purple-accent);
+  border-radius: 12px;
+  padding: 10px 22px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.VPButton.alt:hover {
+  background: var(--ana-purple-light);
+  transform: translateY(-1px);
+}
+
+/* Info Boxes */
+.vp-info {
+  background: linear-gradient(135deg, var(--ana-purple-light) 0%, var(--ana-white) 100%);
+  border: 1px solid var(--ana-purple-medium);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(139, 95, 191, 0.1);
+}
+
+.vp-tip {
+  background: linear-gradient(135deg, var(--ana-purple-soft) 0%, var(--ana-white) 100%);
+  border: 1px solid var(--ana-purple-accent);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(139, 95, 191, 0.15);
+}
+
+.vp-warning {
+  background: linear-gradient(135deg, #fff3cd 0%, var(--ana-white) 100%);
+  border: 1px solid #ffc107;
+  border-radius: 12px;
+}
+
+/* Code Blocks */
+.vp-code-group {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(139, 95, 191, 0.1);
+  margin: 1.5rem 0;
+}
+
+.vp-code-group .tabs {
+  background: var(--ana-purple-medium);
+}
+
+.vp-code-group .tabs input:checked + label {
+  background: var(--ana-purple-accent);
+  color: white;
+}
+
+div[class*="language-"] {
+  background: var(--ana-gray-light);
+  border-radius: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 10px rgba(139, 95, 191, 0.1);
+}
+
+div[class*="language-"] pre {
+  background: transparent;
+}
+
+/* Inline Code */
+.vp-doc code {
+  background: var(--ana-purple-light);
+  color: var(--ana-purple-accent);
+  padding: 2px 6px !important;
+  border-radius: 0px;
+  font-weight: 500;
+}
+
+.vp-doc [class*='language-'] pre{
+  padding: 26px 0px !important;
+}
+
+/* Tables */
+.vp-doc table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(139, 95, 191, 0.1);
+  margin: 1.5rem 0;
+}
+
+.vp-doc th {
+  background: linear-gradient(135deg, var(--ana-purple-accent) 0%, #9d73d1 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.vp-doc tr:nth-child(even) {
+  background: var(--ana-purple-light);
+}
+
+/* Headings */
+.vp-doc h1 {
+  color: var(--ana-purple-accent);
+  border-bottom: 3px solid var(--ana-purple-medium);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.vp-doc h2 {
+  color: var(--ana-purple-accent);
+  border-bottom: 2px solid var(--ana-purple-soft);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vp-doc h3 {
+  color: #9d73d1;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Links */
+.vp-doc a {
+  color: var(--ana-purple-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.vp-doc a:hover {
+  color: #9d73d1;
+  text-decoration: underline;
+}
+
+/* Blockquotes */
+.vp-doc blockquote {
+  background: linear-gradient(135deg, var(--ana-purple-light) 0%, var(--ana-white) 100%);
+  border-left: 4px solid var(--ana-purple-accent);
+  border-radius: 0 12px 12px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(139, 95, 191, 0.1);
+}
+
+/* Footer */
+.VPFooter {
+  background: linear-gradient(135deg, var(--ana-purple-light) 0%, var(--ana-white) 100%);
+  border-top: 2px solid var(--ana-purple-medium);
+  padding: 2rem 0;
+}
+
+/* Search */
+.VPNavBarSearch .DocSearch-Button {
+  background: var(--ana-purple-light);
+  border: 1px solid var(--ana-purple-medium);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.VPNavBarSearch .DocSearch-Button:hover {
+  background: var(--ana-purple-soft);
+  border-color: var(--ana-purple-accent);
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vp-doc > * {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ana-purple-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ana-purple-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9d73d1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .VPHero {
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+  }
+  
+  .vp-info, .vp-tip {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+/* Special Elements for Python Training */
+.python-concept {
+  background: linear-gradient(135deg, var(--ana-purple-soft) 0%, var(--ana-white) 100%);
+  border: 2px solid var(--ana-purple-medium);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.python-concept::before {
+  content: "🐍";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--ana-white);
+  padding: 0 8px;
+  font-size: 1.2rem;
+}
+
+.session-progress {
+  background: linear-gradient(90deg, var(--ana-purple-accent) 0%, #9d73d1 100%);
+  height: 4px;
+  border-radius: 2px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(139, 95, 191, 0.3);
+}
+
+/* Elegant hover effects */
+.VPSidebarItem .link:hover {
+  background: var(--ana-purple-light);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.vp-doc img {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(139, 95, 191, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.vp-doc img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== DARK MODE SPECIFIC STYLING ===== */
+
+/* Dark Mode Header */
+.dark .VPNav {
+  background: linear-gradient(135deg, #1a0d2e 0%, #241240 50%, #2d1b4e 100%);
+  border-bottom: 2px solid #4a2c5a;
+  backdrop-filter: blur(10px);
+}
+
+.dark .VPNavBar .title {
+  color: #c9a9dd;
+}
+
+/* Dark Mode Sidebar */
+.dark .VPSidebar {
+  background: linear-gradient(180deg, #1a0d2e 0%, #241240 50%, #2d1b4e 100%);
+  border-right: 1px solid #4a2c5a;
+}
+
+.dark .VPSidebarItem.level-0 .text {
+  color: #c9a9dd;
+}
+
+.dark .VPSidebarItem.is-active > .item > .link > .text {
+  color: #f8f4ff;
+  background: linear-gradient(135deg, #4a2c5a 0%, #5d3a6b 100%);
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+.dark .VPSidebarItem .link:hover {
+  background: linear-gradient(135deg, #2d1b4e 0%, #4a2c5a 100%);
+  border-radius: 8px;
+}
+
+/* Dark Mode Hero Section */
+.dark .VPHero {
+  background: linear-gradient(135deg, #1a0d2e 0%, #241240 30%, #2d1b4e 60%, #4a2c5a 100%);
+  border: 1px solid #4a2c5a;
+  box-shadow: 0 8px 32px rgba(201, 169, 221, 0.1);
+}
+
+.dark .VPHero .name {
+  background: linear-gradient(135deg, #c9a9dd 0%, #e8d5f2 50%, #f8f4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .VPHero .tagline {
+  color: #e8d5f2;
+}
+
+/* Dark Mode Buttons */
+.dark .VPButton.brand {
+  background: linear-gradient(135deg, #8b5fbf 0%, #b08ae6 50%, #c9a9dd 100%);
+  box-shadow: 0 4px 15px rgba(201, 169, 221, 0.3);
+}
+
+.dark .VPButton.brand:hover {
+  box-shadow: 0 6px 20px rgba(201, 169, 221, 0.4);
+  transform: translateY(-2px);
+}
+
+.dark .VPButton.alt {
+  background: #2d1b4e;
+  border: 2px solid #c9a9dd;
+  color: #c9a9dd;
+}
+
+.dark .VPButton.alt:hover {
+  background: linear-gradient(135deg, #4a2c5a 0%, #5d3a6b 100%);
+  color: #f8f4ff;
+}
+
+/* Dark Mode Info Boxes */
+.dark .vp-info {
+  background: linear-gradient(135deg, #2d1b4e 0%, #241240 50%, #1a0d2e 100%);
+  border: 1px solid #4a2c5a;
+  box-shadow: 0 4px 20px rgba(201, 169, 221, 0.1);
+}
+
+.dark .vp-tip {
+  background: linear-gradient(135deg, #4a2c5a 0%, #2d1b4e 50%, #241240 100%);
+  border: 1px solid #c9a9dd;
+  box-shadow: 0 4px 20px rgba(201, 169, 221, 0.15);
+}
+
+.dark .vp-warning {
+  background: linear-gradient(135deg, #3d2f1f 0%, #2d1b4e 100%);
+  border: 1px solid #d4a574;
+}
+
+/* Dark Mode Code Blocks */
+.dark div[class*="language-"] {
+  background: #241240;
+  border: 1px solid #4a2c5a;
+  box-shadow: 0 4px 15px rgba(201, 169, 221, 0.1);
+}
+
+.dark .vp-code-group .tabs {
+  background: #4a2c5a;
+}
+
+.dark .vp-code-group .tabs input:checked + label {
+  background: linear-gradient(135deg, #8b5fbf 0%, #c9a9dd 100%);
+  color: #f8f4ff;
+}
+
+.dark .vp-doc code {
+  background: #2d1b4e;
+  color: #c9a9dd;
+  border: 1px solid #4a2c5a;
+}
+
+/* Dark Mode Tables */
+.dark .vp-doc table {
+  border: 1px solid #4a2c5a;
+  box-shadow: 0 4px 15px rgba(201, 169, 221, 0.1);
+}
+
+.dark .vp-doc th {
+  background: linear-gradient(135deg, #8b5fbf 0%, #b08ae6 100%);
+  color: #f8f4ff;
+}
+
+.dark .vp-doc tr:nth-child(even) {
+  background: #2d1b4e;
+}
+
+.dark .vp-doc tr:hover {
+  background: #4a2c5a;
+}
+
+/* Dark Mode Headings */
+.dark .vp-doc h1 {
+  color: #c9a9dd;
+  border-bottom: 3px solid #4a2c5a;
+}
+
+.dark .vp-doc h2 {
+  color: #c9a9dd;
+  border-bottom: 2px solid #4a2c5a;
+}
+
+.dark .vp-doc h3 {
+  color: #b08ae6;
+}
+
+/* Dark Mode Links */
+.dark .vp-doc a {
+  color: #c9a9dd;
+}
+
+.dark .vp-doc a:hover {
+  color: #e8d5f2;
+}
+
+/* Dark Mode Blockquotes */
+.dark .vp-doc blockquote {
+  background: linear-gradient(135deg, #2d1b4e 0%, #241240 100%);
+  border-left: 4px solid #c9a9dd;
+  box-shadow: 0 4px 15px rgba(201, 169, 221, 0.1);
+}
+
+/* Dark Mode Footer */
+.dark .VPFooter {
+  background: linear-gradient(135deg, #1a0d2e 0%, #241240 100%);
+  border-top: 2px solid #4a2c5a;
+}
+
+/* Dark Mode Search */
+.dark .VPNavBarSearch .DocSearch-Button {
+  background: #2d1b4e;
+  border: 1px solid #4a2c5a;
+  color: #e8d5f2;
+}
+
+.dark .VPNavBarSearch .DocSearch-Button:hover {
+  background: #4a2c5a;
+  border-color: #c9a9dd;
+}
+
+/* Dark Mode Special Elements */
+.dark .python-concept {
+  background: linear-gradient(135deg, #2d1b4e 0%, #241240 100%);
+  border: 2px solid #4a2c5a;
+  box-shadow: 0 4px 20px rgba(201, 169, 221, 0.1);
+}
+
+.dark .python-concept::before {
+  background: #1a0d2e;
+  border: 1px solid #4a2c5a;
+}
+
+.dark .session-progress {
+  background: linear-gradient(90deg, #8b5fbf 0%, #c9a9dd 100%);
+  box-shadow: 0 2px 8px rgba(201, 169, 221, 0.3);
+}
+
+/* Dark Mode Scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #2d1b4e;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5fbf 0%, #c9a9dd 100%);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c9a9dd 0%, #e8d5f2 100%);
+}
+
+/* Dark Mode Content Area */
+.dark .VPContent {
+  background: #1a0d2e;
+}
+
+.dark .vp-doc {
+  background: #1a0d2e;
+  color: #f8f4ff;
+}
+
+/* Dark Mode Images */
+.dark .vp-doc img {
+  border: 1px solid #4a2c5a;
+  box-shadow: 0 4px 20px rgba(201, 169, 221, 0.2);
+}
+
+/* Dark Mode Transitions */
+.dark * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Selection */
+.dark ::selection {
+  background: rgba(201, 169, 221, 0.3);
+  color: #f8f4ff;
+} 
