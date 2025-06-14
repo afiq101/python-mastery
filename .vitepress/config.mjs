@@ -5,6 +5,13 @@ export default defineConfig({
   title: "Python Mastery Documentation",
   description: "Complete Python mastery materials for beginners - from basics to Excel automation",
   
+  // Build optimization
+  cleanUrls: true,
+  metaChunk: true,
+  
+  // Vercel deployment optimization
+  base: '/',
+  
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#8b5fbf' }],
@@ -14,6 +21,14 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
     ['link', { href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', rel: 'stylesheet' }]
   ],
+
+  // Build configuration
+  vite: {
+    build: {
+      minify: 'terser',
+      chunkSizeWarningLimit: 1000
+    }
+  },
 
   themeConfig: {
     logo: '🐍',
