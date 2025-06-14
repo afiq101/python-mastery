@@ -1,6 +1,0 @@
-{
-  "buildCommand": "yarn build",
-  "outputDirectory": ".vitepress/dist",
-  "installCommand": "yarn install",
-  "framework": null
-} 
